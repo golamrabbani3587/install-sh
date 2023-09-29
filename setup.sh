@@ -63,6 +63,15 @@ if ! dpkg -l | grep -q influxdb; then
     sudo systemctl enable influxdb
 fi
 
+# Install Java (OpenJDK)
+if ! command -v java &> /dev/null; then
+    echo "Installing Java (OpenJDK)..."
+    sudo apt update
+    sudo apt install default-jre
+    sudo apt install default-jdk
+    sudo apt install default-jdk
+fi
+
 # Install Jenkins
 if ! dpkg -l | grep -q jenkins; then
     echo "Installing Jenkins..."
