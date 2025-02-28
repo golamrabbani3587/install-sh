@@ -27,8 +27,8 @@ sudo apt install -y postgresql postgresql-contrib
 sudo systemctl enable postgresql
 sudo systemctl start postgresql
 
-sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD '123456';"
-sudo -u postgres psql -c "ALTER USER postgres WITH SUPERUSER;"
+# sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD '123456';"
+# sudo -u postgres psql -c "ALTER USER postgres WITH SUPERUSER;"
 
 
 echo "PostgreSQL has been reinstalled successfully."
